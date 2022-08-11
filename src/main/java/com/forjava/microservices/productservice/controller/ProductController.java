@@ -26,13 +26,13 @@ public class ProductController
 	}
 	
 	@PostMapping("/")
-	public ResponseEntity<Product> saveProduct(Product product)
+	public Product saveProduct(Product product)
 	{
 		//return new ResponseEntity<Product>
 		
 		
 		Product savedProduct = productService.saveProduct(product);
-		//return savedProduct;				
+		return savedProduct;				
 	}
 	
 	@GetMapping("/")
@@ -42,10 +42,10 @@ public class ProductController
 		return listOfAllProducts;		
 	}
 	
-	public ResponseBody<Product> retrieveProductById(long productId)
-	{
-		
-	}
+//	public ResponseBody<Product> retrieveProductById(long productId)
+//	{
+//		
+//	}
 	
 	
 	 
